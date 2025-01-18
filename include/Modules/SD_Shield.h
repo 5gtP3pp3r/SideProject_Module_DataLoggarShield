@@ -6,10 +6,16 @@
 
 class SD_Shield {
 private:
-    File m_dataFile;
+    uint8_t m_CSPin;
 public:
-    SD_Shield();
-    void writeFile(String p_fileName, String p_datas);
+    SD_Shield(uint8_t p_CSPin);
+    void writeFile(
+        const String& p_fileName, 
+        const String& p_data
+        );
     // Montage en cours. Je vais surement ajouter une classe pour le type de document à sauvegarder et contenu.
-    // Voir comment retourner un fichier complet avec plusieur lignes. Exemple .csv recherche à faire...  
+    
+    String readFile(const String& p_fileName) {
+        // Voir comment retourner un fichier complet avec plusieur lignes. Exemple .csv recherche à faire...  
+    }
 };
