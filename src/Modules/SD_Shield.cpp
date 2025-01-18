@@ -3,9 +3,8 @@
 // Source utilisation et méthodes librairie: arduino-libraries/SD@^1.3.0 depuis "PIO Home/Librairies".
 // Filage et utilisation: https://www.instructables.com/Using-the-Wifi-D1-Mini-Real-time-Clock-and-Logger/
 
-SD_Shield::SD_Shield(uint8_t p_CSPin) : m_CSPin(p_CSPin) {
-    pinMode(m_CSPin, OUTPUT);
-    if (!SD.begin(m_CSPin)) {                               // <SD> prend en charge le CS HIGH ou LOW pour la communication.
+SD_Shield::SD_Shield() {
+    if (!SD.begin(SD_CS)) {                               // <SD> prend en charge le CS HIGH ou LOW pour la communication.
     Serial.println("Incapable de démarrer le Data loggar shield. Vérifiez le câblage.");
     while(true);
     }
