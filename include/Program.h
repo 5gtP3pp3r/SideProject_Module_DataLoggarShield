@@ -4,8 +4,12 @@
 
 class Program {
 private:
+    DS1307Clock* m_clock;
+    SD_Shield* m_SD;
+    CSV_TelemetryLogger* m_CSV_Logger;
 public:
     Program();
+    void loop();
 };
 
 

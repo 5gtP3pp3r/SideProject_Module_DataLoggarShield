@@ -1,6 +1,7 @@
 #pragma once
 #include <SD.h>
 #include <SPI.h>
+#include <Wire.h>
 #include <Arduino.h>
 #include "const.h"
 
