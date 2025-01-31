@@ -8,14 +8,14 @@ private:
     DS1307Clock* m_DS1307Clock;
     String m_fileName;
     String m_header;
+    void createFileName();
+    void createCSVHeader(String p_header);
     
 public:
     CSV_TelemetryLogger(
         SD_Shield* p_sdShield,
         DS1307Clock* p_DS1307Clock
     );
-    void init();
-    void createFileName();
-    void createCSVHeader(String p_header);
+    void init();    
     void logData(String p_data);   
 };

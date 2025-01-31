@@ -1,7 +1,6 @@
 #pragma once
 #include <RTClib.h>
 #include <Arduino.h>
-
 #include "const.h"
 
 class DS1307Clock {
@@ -9,7 +8,7 @@ private:
     RTC_DS1307 m_RTC;
     DateTime m_lastReadTime;
     uint16_t m_interval;
-    String formatTwoDigits(uint8_t number);
+    String formatTwoDigits(uint8_t p_number);
 public:
     DS1307Clock();
     void refreshTime();

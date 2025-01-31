@@ -16,7 +16,7 @@ void CSV_TelemetryLogger::init() {
     createCSVHeader(CSV_TELEMETRY_HEADER);
 }
 void CSV_TelemetryLogger::createFileName() {
-    String currentDateTime = this->m_DS1307Clock->getActualDateTime();
+    String currentDateTime = "/" + this->m_DS1307Clock->getActualDateTime();
     this->m_fileName = currentDateTime + CSV;
 }
 void CSV_TelemetryLogger::createCSVHeader(String p_header) {
