@@ -38,12 +38,12 @@
 #define G_CONST 9.81f                   // Constante De la gravité.
 
 // WIFI D1 Mini Data loggar shield
-#define SD_CS 5                         // Première fois avec un protocole SPI! Pin CS à définir selon dispo
-#define SD_SCK 18
-#define SD_MISO 19
-#define SD_MOSI  23
+#define SD_CS 5         //D8    mauve   CS                                    // Première fois avec un protocole SPI! Pin CS à définir selon dispo
+#define SD_SCK 18       //D5    jaune   clock (SCK)
+#define SD_MISO 23      //D7    bleu    DI
+#define SD_MOSI 12      //D6    vert    DO
 #define CSV ".csv"
 
-#define CSV_TELEMETRY_HEADER "time;temperature;altitude;pressure"   // Temporaire pour essait, à redéfinir   
+#define CSV_TELEMETRY_HEADER "time;temperature;altitude;pressure;speed;axeZg"   // Temporaire pour essait, à redéfinir   
 
 #define JSON_FILE_PATH "/config.json"
